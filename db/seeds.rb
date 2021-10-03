@@ -37,25 +37,25 @@ puts "Creating 10 users..."
 saved_users = []
 
 mayeul = User.new(first_name:"Mayeul", last_name:"Pons",
-sex:"Male", weight:72, height:175, age:23, objectives:"endurance", rating:5)
+sex:"Male", weight:72, height:175, age:23, objectives:"endurance", rating:5, email:"contact@myminicom.com", password:"123456")
 louise = User.new(first_name:"Louise", last_name:"Tabouret",
-sex:"Male", weight:63, height:173, age:30, objectives:"muscles", rating:4)
+sex:"Male", weight:63, height:173, age:30, objectives:"muscles", rating:4, email:"contac@myminicom.com", password:"123456")
 loulou = User.new(first_name:"Louise", last_name:"LaGuerne",
-sex:"Male", weight:62, height:172, age:27, objectives:"breath", rating:3)
+sex:"Male", weight:62, height:172, age:27, objectives:"breath", rating:3, email:"conta@myminicom.com", password:"123456")
 lea = User.new(first_name:"Lea", last_name:"Ravaux",
-sex:"Male", weight:58, height:170, age:23, objectives:"muscles", rating:5)
+sex:"Male", weight:58, height:170, age:23, objectives:"muscles", rating:5, email:"cont@myminicom.com", password:"123456")
 manu = User.new(first_name:"Emmanuel", last_name:"Madarassou",
-sex:"Male", weight:66, height:170, age:25, objectives:"endurance", rating:4)
+sex:"Male", weight:66, height:170, age:25, objectives:"endurance", rating:4, email:"con@myminicom.com", password:"123456")
 julie = User.new(first_name:"Julie", last_name:"Paume",
-sex:"Male", weight:58, height:168, age:24, objectives:"breath", rating:3)
+sex:"Male", weight:58, height:168, age:24, objectives:"breath", rating:3, email:"co@myminicom.com", password:"123456")
 ancolie = User.new(first_name:"Ancolie", last_name:"Landa",
-sex:"Male", weight:56, height:170, age:32, objectives:"endurance", rating:4)
+sex:"Male", weight:56, height:170, age:32, objectives:"endurance", rating:4, email:"c@myminicom.com", password:"123456")
 willem = User.new(first_name:"Willem", last_name:"Lacour",
-sex:"Male", weight:69, height:171, age:36, objectives:"muscles", rating:2)
+sex:"Male", weight:69, height:171, age:36, objectives:"muscles", rating:2, email:"redaction@myminicom.com", password:"123456")
 hicham = User.new(first_name:"Hicham", last_name:"DeLacour",
-sex:"Male", weight:66, height:174, age:35, objectives:"weight", rating:2)
+sex:"Male", weight:66, height:174, age:35, objectives:"weight", rating:2, email:"redactio@myminicom.com", password:"123456")
 corentin = User.new(first_name:"Corentin", last_name:"Bironneau",
-sex:"Male", weight:71, height:175, age:25, objectives:"weight", rating:5)
+sex:"Male", weight:71, height:175, age:25, objectives:"weight", rating:5, email:"redacti@myminicom.com", password:"123456")
 
 users = [mayeul, louise, loulou, lea, manu, julie, ancolie, willem, hicham, corentin]
 users.each do |user|
@@ -71,10 +71,10 @@ puts " "
 puts "Creating 4 coaches..."
 saved_coaches = []
 
-quentin = Coach.new(first_name:"Quentin", last_name:"Louvel", graduation:"Coach school", sports:"crossfit", age:25, location:"12 rue Alexandre Dumas, 75020 Paris", rating: 5)
-raphael = Coach.new(first_name:"Raphael", last_name:"Kalinowski", graduation:"Paris Coach school", sports:"English boxing", age:31, location:"114 Boulevard de Charonne, 75020 Paris", rating: 3)
-stephanie = Coach.new(first_name:"Stephanie", last_name:"Nogues", graduation:"Charonne Coach school", sports:"Dance", age:36, location:"114 Boulevard de Charonne, 75020 Paris", rating: 4)
-clement = Coach.new(first_name:"Clement", last_name:"Gourdin", graduation:"Neoness school", sports:"MMA", age:35, location:"23 rue Hénard, 75012 Paris", rating: 2)
+quentin = Coach.new(first_name:"Quentin", last_name:"Louvel", graduation:"Coach school", sports:"crossfit", age:25, location:"12 rue Alexandre Dumas, 75020 Paris", rating: 5, email:"raphael@myminicom.com", password:"123456")
+raphael = Coach.new(first_name:"Raphael", last_name:"Kalinowski", graduation:"Paris Coach school", sports:"English boxing", age:31, location:"114 Boulevard de Charonne, 75020 Paris", rating: 3, email:"raphae@myminicom.com", password:"123456")
+stephanie = Coach.new(first_name:"Stephanie", last_name:"Nogues", graduation:"Charonne Coach school", sports:"Dance", age:36, location:"114 Boulevard de Charonne, 75020 Paris", rating: 4, email:"rapha@myminicom.com", password:"123456")
+clement = Coach.new(first_name:"Clement", last_name:"Gourdin", graduation:"Neoness school", sports:"MMA", age:35, location:"23 rue Hénard, 75012 Paris", rating: 2, email:"raph@myminicom.com", password:"123456")
 
 coaches = [quentin, raphael, stephanie, clement]
 
