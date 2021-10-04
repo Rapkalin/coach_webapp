@@ -1,0 +1,12 @@
+this is the home page
+
+<% if current_user %>
+  <p>Hello <%= current_user.first_name %>!</p>
+  <p>Welcome to your personnalize dashboard</p>
+<% elsif current_coach %>
+  <p>Hello <%= current_coach.first_name %>!</p>
+  <p>Welcome to your coaching dashboard</p>
+<% else %>
+  <%= link_to 'LOG IN AS COACH', new_coach_registration_path %>
+  <%= link_to 'K_LOG IN CUSTOMER', new_user_registration_path %>
+<% end %>
