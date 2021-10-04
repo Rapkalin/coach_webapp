@@ -5,7 +5,7 @@ this is the home page
   <p>Welcome to your personnalize dashboard</p>
 <% elsif current_coach %>
   <p>Hello <%= current_coach.first_name %>!</p>
-  <p>Welcome to your coaching dashboard</p>
+  <%= render "home_coach" %>
 <% else %>
   <%= link_to 'LOG IN AS COACH', new_coach_registration_path %>
   <%= link_to 'LOG IN CUSTOMER', new_user_registration_path %>
