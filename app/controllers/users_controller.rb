@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate_user!, only: :show
+
   def show
     if current_coach
-      users = Session.where(coach_id: current_coach.id)
-
+      @user = User.find(params[:id])
     end
   end
 end
