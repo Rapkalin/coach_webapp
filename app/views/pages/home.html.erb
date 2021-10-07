@@ -1,4 +1,4 @@
-this is the home page
+<h1>this is the home page</h1>
 
 <% if current_user %>
   <p>Hello <%= current_user.first_name %>!</p>
@@ -7,6 +7,8 @@ this is the home page
   <p>Hello <%= current_coach.first_name %>!</p>
   <%= render "home_coach" %>
 <% else %>
-  <%= link_to 'LOG IN AS COACH', new_coach_registration_path %>
-  <%= link_to 'LOG IN CUSTOMER', new_user_registration_path %>
+  <div class="container">
+    <%= link_to 'LOG IN AS COACH', new_coach_registration_path %>
+    <%= link_to 'LOG IN CUSTOMER', new_user_registration_path %>
+  </div>
 <% end %>

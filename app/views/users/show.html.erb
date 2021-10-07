@@ -1,6 +1,12 @@
 <% if current_coach %>
   <h1>This is the view from <%= @user.first_name %></h1>
   <%= link_to "Back on my dashboard", root_path %>
+  <%= @user.objectives %>
 <% elsif current_user %>
   <h1>Hi <%= @user.first_name %> Welcome to your profil page </h1>
+<% end %>
+
+<% @user.sessions.each do |session| %>
+  <li><%= session.title %></li>
+  <li><%= session.location %></li>
 <% end %>
