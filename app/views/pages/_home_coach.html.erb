@@ -1,6 +1,10 @@
 <h1>Welcome to the coaching dashboard</h1>
 <p>Here is your client list:</p>
 
-<% @sessions.uniq { |session| session[:user_id] }.each do |session| %>
+<%# @sessions.uniq { |session| session[:user_id] }.each do |session| %>
+  <li><%#= link_to session.user.first_name, user_path(session.user.id) %></li>
+<%# end %>
+
+<% @sessions.each do |session| %>
   <li><%= link_to session.user.first_name, user_path(session.user.id) %></li>
 <% end %>
