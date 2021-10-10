@@ -109,7 +109,7 @@ puts "#{saved_movements.length} movements have been created!"
 puts " "
 puts " "
 
-puts "Creating 6 sessions..."
+puts "Creating 7 sessions..."
 
 saved_sessions = []
 
@@ -119,8 +119,9 @@ session_quentin_lea_new = Session.new(title:"Session: #{quentin.first_name} x #{
 session_raphael_mayeul = Session.new(title:"Session: #{raphael.first_name} x #{mayeul.first_name}", objectives:"Session: #{quentin.first_name} x #{mayeul.first_name} - #{mayeul.objectives}", location: "198 Boulevard de la Villette, 75019 Paris", duration: 120, results:"5 rep de 20 x #{squat.name} & 8 rep de 12 x #{lift_up.name} & 5 rep de 15 x #{burpees.name}", coach_id: raphael.id, user_id: mayeul.id, movement_id: squat.id)
 session_stephanie_loulou = Session.new(title:"Session: #{stephanie.first_name} x #{loulou.first_name}", objectives:"#{loulou.first_name} - #{loulou.objectives}", location:"134 Boulevard de Charonne, 75020 Paris", duration: 90, results:"3 rep de 20 x #{lift_up.name} & 5 rep de 10 x #{squat.name}", coach_id: stephanie.id, user_id: loulou.id, movement_id: lift_up.id)
 session_clement_julie = Session.new(title:"Session: #{clement.first_name} x #{julie.first_name}", objectives:"#{julie.first_name} - #{julie.objectives}", location:"14 rue Voltaire, 75011 Paris", duration: 30, results:"3 rep de 20 x #{push_up.name} & 5 rep de 10 x #{squat.name}", coach_id: clement.id, user_id: julie.id, movement_id: push_up.id)
+session_raphael_lea = Session.new(title:"Session: #{raphael.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location:"87 rue Voltaire, 75020 Paris", duration: 60, results:"3 rep de 20 x #{push_up.name} & 5 rep de 10 x #{squat.name}", coach_id: raphael.id, user_id: lea.id, movement_id: push_up.id)
 
-sessions = [session_quentin_manu, session_quentin_lea, session_raphael_mayeul, session_stephanie_loulou, session_clement_julie, session_quentin_lea_new]
+sessions = [session_quentin_manu, session_quentin_lea, session_raphael_mayeul, session_stephanie_loulou, session_clement_julie, session_quentin_lea_new, session_raphael_lea]
 
 sessions.each do |session|
   session.save!
