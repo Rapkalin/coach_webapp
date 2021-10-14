@@ -6,8 +6,9 @@
   <h1>Hi <%= @user.first_name %> Welcome to your profil page </h1>
 <% end %>
 
-<% @user.sessions.each do |session| %>
+<% @sessions.each do |session| %>
   <div class="session">
+    <li>Coach : <%= session.coach.first_name %></li>
     <li>Session N° <%= session.id %></li>
     <li>Nom de la session : <%= session.title %></li>
     <li>Lieu : <%= session.location %></li>
