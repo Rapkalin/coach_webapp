@@ -1,0 +1,11 @@
+
+<% @sessions.each_with_index do |session, index| %>
+  <div class="session">
+    <li>Session N° <%= index + 1 %></li>
+    <li>Date de la session : <%= session.date  %></li>
+    <li>Nom de la session : <%= session.title %></li>
+    <li>Objectifs de la session : <%= session.objectives %></li>
+    <li>Lieu : <%= session.location %></li>
+    <br>
+  </div>
+<% end %>
