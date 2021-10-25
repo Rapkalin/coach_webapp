@@ -1,17 +1,19 @@
 <% if current_coach %>
+  <li><%= link_to "<< Back on my dashboard", root_path %></li>
   <h1>This is the view from <%= @user.first_name %></h1>
-  <li><%= @user.objectives %></li>
-  <li><%= link_to "Back on my dashboard", root_path %></li>
+  <li>Objectifs de <%= @user.first_name %> : <%= @user.objectives %></li>
 <% elsif current_user %>
   <h1>Hi <%= @user.first_name %> Welcome to your profil page </h1>
 <% end %>
 
-<% @sessions.each do |session| %>
+<% @sessions.each_with_index do |session, index| %>
   <div class="session">
-    <li>Coach : <%= session.coach.first_name %></li>
-    <li>Session N° <%= session.id %></li>
+    <li>Session N° <%= index + 1 %></li>
     <li>Nom de la session : <%= session.title %></li>
+    <li>Objectifs de la session : <%= session.objectives %></li>
     <li>Lieu : <%= session.location %></li>
     <br>
   </div>
 <% end %>
+
+<%# Add a form to add a session %>
