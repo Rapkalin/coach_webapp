@@ -95,7 +95,7 @@ saved_movements = []
 lift_up = Movement.new(name:"Lift up", description:"Move your arm from bottom to top", rest_time: 15)
 push_up = Movement.new(name:"Push up", description:"Lying on the ground and push your body with your arms top to bottom", rest_time: 30)
 squat = Movement.new(name:"Squat", description:"Put one leg a front of you one leg behind and push your body with your legs bottom to top", rest_time: 15)
-burpees = Movement.new(name:"Burpees", description:"Lying on the ground, push with your arms to lift up your body and stand up then jump ones", rest_time: 60)
+burpee = Movement.new(name:"Burpee", description:"Lying on the ground, push with your arms to lift up your body and stand up then jump ones", rest_time: 60)
 
 movements = [lift_up, push_up, squat, burpees]
 
