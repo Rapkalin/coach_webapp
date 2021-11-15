@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_25_202742) do
+ActiveRecord::Schema.define(version: 2021_11_14_173900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_10_25_202742) do
     t.index ["movement_id"], name: "index_protocols_on_movement_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
+  create_table "trainings", force: :cascade do |t|
     t.string "title"
     t.string "objectives"
     t.string "location"
@@ -64,9 +64,9 @@ ActiveRecord::Schema.define(version: 2021_10_25_202742) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "date"
-    t.index ["coach_id"], name: "index_sessions_on_coach_id"
-    t.index ["movement_id"], name: "index_sessions_on_movement_id"
-    t.index ["user_id"], name: "index_sessions_on_user_id"
+    t.index ["coach_id"], name: "index_trainings_on_coach_id"
+    t.index ["movement_id"], name: "index_trainings_on_movement_id"
+    t.index ["user_id"], name: "index_trainings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2021_10_25_202742) do
   end
 
   add_foreign_key "protocols", "movements"
-  add_foreign_key "sessions", "coaches"
-  add_foreign_key "sessions", "movements"
-  add_foreign_key "sessions", "users"
+  add_foreign_key "trainings", "coaches"
+  add_foreign_key "trainings", "movements"
+  add_foreign_key "trainings", "users"
 end

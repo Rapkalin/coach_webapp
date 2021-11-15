@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
-    resources :sessions, only: [:new, :create]
-    resources :users, only: :show
+  resources :users, only: :show
+  resources :trainings, only: [:new, :create]
 end

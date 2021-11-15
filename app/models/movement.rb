@@ -1,4 +1,4 @@
 class Movement < ApplicationRecord
-  has_many :sessions,  dependent: :destroy
+  has_many :trainings,  dependent: :destroy
   MOVEMENTS = ["Burpee","Push up","Squat"]
 end
