@@ -14,8 +14,8 @@ class TrainingsController < ApplicationController
       @coach = current_coach
       @user = User.find(params["training"]["user_id"])
       @training = Training.new(training_params)
-      @training.save
-      raise # Check out to get the user id
+      @training.save!
+      # raise # Check out to get the user id
       if @training.save
         flash[:success] = "Training session successfully created"
         redirect_to root_path
