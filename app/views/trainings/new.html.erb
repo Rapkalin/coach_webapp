@@ -1,0 +1,18 @@
+<div>
+  <p>this is a new page for as training session</p>
+  <%= form_for @training do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :objectives %>
+    <%= f.text_field :objectives %>
+    <%= f.label :duration %>
+    <%= f.number_field :duration %>
+    <%= f.label :Movements %>
+    <%= f.collection_check_boxes :movement_id, Movement.order(:name), :id, :name %>
+    <%= f.hidden_field :user_id, value: params[:user_id].to_i %>
+    <%= f.hidden_field :coach_id, value: current_coach.id %>
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -28,8 +28,8 @@ puts " "
 # puts " "
 # puts " "
 
-Session.destroy_all
-puts "Sessions cleaned"
+Training.destroy_all
+puts "Trainings cleaned"
 puts " "
 puts " "
 
@@ -95,7 +95,7 @@ saved_movements = []
 lift_up = Movement.new(name:"Lift up", description:"Move your arm from bottom to top", rest_time: 15)
 push_up = Movement.new(name:"Push up", description:"Lying on the ground and push your body with your arms top to bottom", rest_time: 30)
 squat = Movement.new(name:"Squat", description:"Put one leg a front of you one leg behind and push your body with your legs bottom to top", rest_time: 15)
-burpees = Movement.new(name:"Burpees", description:"Lying on the ground, push with your arms to lift up your body and stand up then jump ones", rest_time: 60)
+burpee = Movement.new(name:"Burpee", description:"Lying on the ground, push with your arms to lift up your body and stand up then jump ones", rest_time: 60)
 
 movements = [lift_up, push_up, squat, burpees]
 
@@ -109,25 +109,25 @@ puts "#{saved_movements.length} movements have been created!"
 puts " "
 puts " "
 
-puts "Creating 7 sessions..."
+puts "Creating 7 trainings..."
 
-saved_sessions = []
-session_quentin_manu = Session.new(title:"Session: #{quentin.first_name} x #{manu.first_name}" , objectives:"#{manu.first_name} - #{manu.objectives}", location: "134 Boulevard de Charonne, 75020 Paris", duration: 90, results:"3 rep de 20 x #{lift_up.name} & 5 rep de 10 x #{burpees.name}", coach_id: quentin.id, user_id: manu.id, movement_id: lift_up.id, date: '2021-10-23')
-session_quentin_lea = Session.new(title:"Session: #{quentin.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location: "34 Boulevard de Charonne, 75020 Paris", duration: 60, results:"5 rep de 10 x #{push_up.name} & 3 rep de 10 x #{burpees.name}", coach_id: quentin.id, user_id: lea.id, movement_id: push_up.id, date: '2021-09-12')
-session_quentin_lea_new = Session.new(title:"Session: #{quentin.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location: "22 Boulevard de Charonne, 75011 Paris", duration: 30, results:"4 rep de 20 x #{squat.name} & 3 rep de 10 x #{burpees.name}", coach_id: quentin.id, user_id: lea.id, movement_id: push_up.id, date: '2021-08-20')
-session_raphael_mayeul = Session.new(title:"Session: #{raphael.first_name} x #{mayeul.first_name}", objectives:"Session: #{quentin.first_name} x #{mayeul.first_name} - #{mayeul.objectives}", location: "198 Boulevard de la Villette, 75019 Paris", duration: 120, results:"5 rep de 20 x #{squat.name} & 8 rep de 12 x #{lift_up.name} & 5 rep de 15 x #{burpees.name}", coach_id: raphael.id, user_id: mayeul.id, movement_id: squat.id, date: '2021-04-13')
-session_stephanie_loulou = Session.new(title:"Session: #{stephanie.first_name} x #{loulou.first_name}", objectives:"#{loulou.first_name} - #{loulou.objectives}", location:"134 Boulevard de Charonne, 75020 Paris", duration: 90, results:"3 rep de 20 x #{lift_up.name} & 5 rep de 10 x #{squat.name}", coach_id: stephanie.id, user_id: loulou.id, movement_id: lift_up.id, date: '2021-10-13')
-session_clement_julie = Session.new(title:"Session: #{clement.first_name} x #{julie.first_name}", objectives:"#{julie.first_name} - #{julie.objectives}", location:"14 rue Voltaire, 75011 Paris", duration: 30, results:"3 rep de 20 x #{push_up.name} & 5 rep de 10 x #{squat.name}", coach_id: clement.id, user_id: julie.id, movement_id: push_up.id, date: '2021-02-23')
-session_raphael_lea = Session.new(title:"Session: #{raphael.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location:"87 rue Voltaire, 75020 Paris", duration: 60, results:"3 rep de 20 x #{push_up.name} & 5 rep de 10 x #{squat.name}", coach_id: raphael.id, user_id: lea.id, movement_id: push_up.id, date: '2021-01-12')
+saved_trainings = []
+training_quentin_manu = Training.new(title:"Training session: #{quentin.first_name} x #{manu.first_name}" , objectives:"#{manu.first_name} - #{manu.objectives}", location: "134 Boulevard de Charonne, 75020 Paris", duration: 90, results:"3 rep de 20 x #{lift_up.name} & 5 rep de 10 x #{burpees.name}", coach_id: quentin.id, user_id: manu.id, movement_id: lift_up.id, date: '2021-10-23')
+training_quentin_lea = Training.new(title:"Training session: #{quentin.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location: "34 Boulevard de Charonne, 75020 Paris", duration: 60, results:"5 rep de 10 x #{push_up.name} & 3 rep de 10 x #{burpees.name}", coach_id: quentin.id, user_id: lea.id, movement_id: push_up.id, date: '2021-09-12')
+training_quentin_lea_new = Training.new(title:"Training session: #{quentin.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location: "22 Boulevard de Charonne, 75011 Paris", duration: 30, results:"4 rep de 20 x #{squat.name} & 3 rep de 10 x #{burpees.name}", coach_id: quentin.id, user_id: lea.id, movement_id: push_up.id, date: '2021-08-20')
+training_raphael_mayeul = Training.new(title:"Training session: #{raphael.first_name} x #{mayeul.first_name}", objectives:"Training: #{quentin.first_name} x #{mayeul.first_name} - #{mayeul.objectives}", location: "198 Boulevard de la Villette, 75019 Paris", duration: 120, results:"5 rep de 20 x #{squat.name} & 8 rep de 12 x #{lift_up.name} & 5 rep de 15 x #{burpees.name}", coach_id: raphael.id, user_id: mayeul.id, movement_id: squat.id, date: '2021-04-13')
+training_stephanie_loulou = Training.new(title:"Training session: #{stephanie.first_name} x #{loulou.first_name}", objectives:"#{loulou.first_name} - #{loulou.objectives}", location:"134 Boulevard de Charonne, 75020 Paris", duration: 90, results:"3 rep de 20 x #{lift_up.name} & 5 rep de 10 x #{squat.name}", coach_id: stephanie.id, user_id: loulou.id, movement_id: lift_up.id, date: '2021-10-13')
+training_clement_julie = Training.new(title:"Training session: #{clement.first_name} x #{julie.first_name}", objectives:"#{julie.first_name} - #{julie.objectives}", location:"14 rue Voltaire, 75011 Paris", duration: 30, results:"3 rep de 20 x #{push_up.name} & 5 rep de 10 x #{squat.name}", coach_id: clement.id, user_id: julie.id, movement_id: push_up.id, date: '2021-02-23')
+training_raphael_lea = Training.new(title:"Training session: #{raphael.first_name} x #{lea.first_name}", objectives:"#{lea.first_name} - #{lea.objectives}", location:"87 rue Voltaire, 75020 Paris", duration: 60, results:"3 rep de 20 x #{push_up.name} & 5 rep de 10 x #{squat.name}", coach_id: raphael.id, user_id: lea.id, movement_id: push_up.id, date: '2021-01-12')
 
-sessions = [session_quentin_manu, session_quentin_lea, session_raphael_mayeul, session_stephanie_loulou, session_clement_julie, session_quentin_lea_new, session_raphael_lea]
+trainings = [training_quentin_manu, training_quentin_lea, training_raphael_mayeul, training_stephanie_loulou, training_clement_julie, training_quentin_lea_new, training_raphael_lea]
 
-sessions.each do |session|
-  session.save!
-  saved_sessions << session
-  puts "User ID n°#{session.id} - #{session.title} has been created"
+trainings.each do |training|
+  training.save!
+  saved_trainings << training
+  puts "User ID n°#{training.id} - #{training.title} has been created"
 end
 
-puts "#{saved_sessions.length} sessions have been created!"
+puts "#{saved_trainings.length} Trainings have been created!"
 puts " "
 puts " "
