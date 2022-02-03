@@ -15,7 +15,6 @@ class TrainingsController < ApplicationController
       @user = User.find(params["training"]["user_id"])
       @training = Training.new(training_params)
       @training.save!
-      # raise # Check out to get the user id
       if @training.save
         flash[:success] = "Training session successfully created"
         redirect_to root_path
@@ -29,7 +28,7 @@ class TrainingsController < ApplicationController
   private
 
   def training_params
-    params.require(:training).permit(:title, :objectives, :location, :duration, :results, :movement_id, :coach_id, :user_id)
+    params.require(:training).permit(:title, :objectives, :location, :duration, :coach_id, :user_id, movements: [])
   end
 
 end
