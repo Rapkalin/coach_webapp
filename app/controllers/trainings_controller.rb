@@ -1,5 +1,5 @@
 class TrainingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create, :new]
+  skip_before_action :authenticate_user!, only: [:create, :new, :show, :destroy]
 
   def new
     if current_coach
@@ -17,12 +17,18 @@ class TrainingsController < ApplicationController
       @training.save!
       if @training.save
         flash[:success] = "Training session successfully created"
-        redirect_to root_path
+        redirect_to user_path(@user)
       else
         flash[:error] = "Something went wrong"
         render 'new'
       end
     end
+  end
+
+  def destroy
+    @training = Training.find(params[:id])
+    @training.destroy
+    redirect_back(fallback_location: root_path)
   end
 
   private
