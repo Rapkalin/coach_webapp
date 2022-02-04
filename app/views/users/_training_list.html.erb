@@ -6,6 +6,9 @@
     <li>Nom de la training session : <%= training.title %></li>
     <li>Objectifs de la training session : <%= training.objectives %></li>
     <li>Lieu : <%= training.location %></li>
+    <li><%= link_to "Delete", training,
+            method: :delete,
+            data: { confirm: "Are your sure?"}%></li>
     <br>
   </div>
 <% end %>

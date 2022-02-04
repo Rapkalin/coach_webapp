@@ -1,5 +1,5 @@
 class TrainingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create, :new]
+  skip_before_action :authenticate_user!, only: [:create, :new, :show, :destroy]
 
   def new
     if current_coach
@@ -23,6 +23,12 @@ class TrainingsController < ApplicationController
         render 'new'
       end
     end
+  end
+
+  def destroy
+    @training = Training.find(params[:id])
+    @training.destroy
+    redirect_back(fallback_location: root_path)
   end
 
   private
