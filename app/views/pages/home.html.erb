@@ -2,6 +2,8 @@
 <% if current_user %>
   <p>Hello <%= current_user.first_name %>!</p>
   <p>Welcome to your personnalize dashboard</p>
+  <%= render "home_user" %>
+
 <% elsif current_coach %>
   <p>Hello <%= current_coach.first_name %>!</p>
   <%= render "home_coach" %>

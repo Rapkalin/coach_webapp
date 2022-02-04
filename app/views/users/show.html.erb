@@ -5,8 +5,8 @@
   <%= render "training_list" %>
   <%= link_to "Create a new training", new_training_path(:user_id => params[:id]) %>
 <% elsif current_user %>
-  <h1>Hi <%= @user.first_name %> Welcome to your profil page </h1>
-  <li>Vos objectifs : <%= @user.objectives %></li>
+  <h1>Hi <%= current_user.first_name %> Welcome to your profil page </h1>
+  <li>Vos objectifs : <%= current_user.objectives %></li>
   <%= render "training_list" %>
 <% end %>
 

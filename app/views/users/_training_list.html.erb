@@ -2,6 +2,7 @@
 <% @trainings.each_with_index do |training, index| %>
   <div class="training">
     <li>Training session N° <%= index + 1 %></li>
+    <li><%#= NOM DU COACH  %></li>
     <li>Date de la training session : <%= training.date  %></li>
     <li>Nom de la training session : <%= training.title %></li>
     <li>Objectifs de la training session : <%= training.objectives %></li>
