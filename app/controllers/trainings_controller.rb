@@ -17,7 +17,7 @@ class TrainingsController < ApplicationController
       @training.save!
       if @training.save
         flash[:success] = "Training session successfully created"
-        redirect_to root_path
+        redirect_to user_path(@user)
       else
         flash[:error] = "Something went wrong"
         render 'new'
