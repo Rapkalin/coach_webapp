@@ -10,7 +10,7 @@
     <%= f.label :duration %>
     <%= f.number_field :duration %>
     <%= f.label :Movements %>
-    <%= f.collection_check_boxes :movement_id, Movement.order(:name), :id, :name %>
+    <%= f.collection_check_boxes :movements, Movement.order(:name), :id, :name %>
     <%= f.hidden_field :user_id, value: params[:user_id].to_i %>
     <%= f.hidden_field :coach_id, value: current_coach.id %>
     <%= f.submit %>
