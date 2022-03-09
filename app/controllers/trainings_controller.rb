@@ -1,3 +1,5 @@
+require 'date'
+
 class TrainingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:create, :new, :show, :destroy, :edit, :update]
 

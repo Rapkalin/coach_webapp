@@ -1,5 +1,8 @@
 <div>
   <p>this is a new page for as training session</p>
+  <li><%= link_to "<< Back on my dashboard", root_path %></li>
+  <br>
+
   <%= form_for (@training) do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
