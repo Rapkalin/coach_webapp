@@ -7,10 +7,12 @@
     <li>Nom de la training session : <%= training.title %></li>
     <li>Objectifs de la training session : <%= training.objectives %></li>
     <li>Lieu : <%= training.location %></li>
+    <% if current_coach %>
     <li><%= link_to "Delete", training,
             method: :delete,
             data: { confirm: "Are your sure?"}%></li>
     <li><%= link_to "Edit", edit_training_path(training)%></li>
+    <% end %>
     <br>
   </div>
 <% end %>
