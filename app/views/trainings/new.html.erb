@@ -3,6 +3,8 @@
   <%= form_for (@training) do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
+    <%= f.label :date %>
+    <%= f.date_select(:date, :order => [:month, :day, :year]) %>
     <%= f.label :location %>
     <%= f.text_field :location %>
     <%= f.label :objectives %>
