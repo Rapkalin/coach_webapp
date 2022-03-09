@@ -10,6 +10,7 @@
     <li><%= link_to "Delete", training,
             method: :delete,
             data: { confirm: "Are your sure?"}%></li>
+    <li><%= link_to "Edit", edit_training_path(training)%></li>
     <br>
   </div>
 <% end %>
