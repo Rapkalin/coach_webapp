@@ -20,18 +20,21 @@
  }
 
  .flash {
-  padding: 16px 24px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  background: #badbcc;
+  color: black;
+  box-shadow: 0 0 8px rgb(0 0 0 / 20%);
   border-radius: 4px;
   margin: 8px;
 }
 
 .flash-success {
-  border: 2px solid #1EDD88;
+  border: 1px solid #badbcc;
+  width: fit-content;
+  height: fit-content;
 }
 
 .flash-warning {
