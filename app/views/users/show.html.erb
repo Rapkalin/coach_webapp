@@ -1,7 +1,6 @@
 
 <div>
   <% if current_coach %>
-    <li><%= link_to "<< Back on my dashboard", root_path %></li>
     <h1>This is the view from <%= @user.first_name %></h1>
     <li>Objectifs de <%= @user.first_name %> : <%= @user.objectives %></li>
     <%= render "training_list" %>
