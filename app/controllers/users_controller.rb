@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate_user!, only: :show
+  skip_before_action :authenticate_user!, only: [:show, :edit]
 
   def show
     if current_coach
@@ -12,4 +12,9 @@ class UsersController < ApplicationController
       @trainings = @user.trainings
     end
   end
+
+  def edit
+    @user = current_user
+  end
+
 end

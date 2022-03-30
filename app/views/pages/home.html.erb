@@ -1,20 +1,9 @@
-
-<% if current_user %>
-  <p>Hello <%= current_user.first_name %>!</p>
-  <p>Welcome to your personnalize dashboard</p>
-  <%= render "home_user" %>
-
-<% elsif current_coach %>
-  <p>Hello <%= current_coach.first_name %>!</p>
-  <%= render "home_coach" %>
-<% else %>
-  <h1>this is the home page</h1>
-  <div class="container">
-    <div class="login" id="logcoach">
-      <%= link_to 'LOG IN AS COACH', new_coach_registration_path %>
-    </div>
-    <div class="login" id="logcustomer">
-      <%= link_to 'LOG IN CUSTOMER', new_user_registration_path %>
-    </div>
-  </div>
-<% end %>
+<div class="container">
+  <% if current_user %>
+    <%= render "home_user" %>
+  <% elsif current_coach %>
+    <%= render "home_coach" %>
+  <% else %>
+    <%= render "home_no_login" %>
+  <% end %>
+</div>
