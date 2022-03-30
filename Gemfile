@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.3'
+ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
@@ -25,8 +25,19 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# i18n Internationalization
+gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
+# gem 'rails-i18n', '~> 6.0' # For 6.x
+# gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+# gem 'rails-i18n', '~> 4.0' # For 4.0.x
+# gem 'rails-i18n', '~> 3.0' # For 3.x
+# gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 5.x
+# gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-4-x' # For 4.x
+# gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-3-x' # For 3.x
+
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+#gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '~> 1.11', '>= 1.11.1'
 
 # Devise An authentication gem for Rails
 gem 'devise'
