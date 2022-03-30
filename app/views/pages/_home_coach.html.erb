@@ -1,6 +1,5 @@
-<h1>Welcome to the coaching dashboard</h1>
-<p>Here is your client list:</p>
-
+<h1 class="welcome">Bienvenue <%= current_coach.first_name %> !</h1>
+<p>Voici un résumé de vos clients : <br>Cliquez sur leurs noms pour avoir le détail</p>
 <% @trainings.each do |training| %>
   <li><%= link_to training.user.first_name, user_path(training.user.id) %></li>
 <% end %>
