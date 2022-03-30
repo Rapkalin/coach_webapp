@@ -12,4 +12,9 @@ class UsersController < ApplicationController
       @trainings = @user.trainings
     end
   end
+
+  def edit
+    raise
+  end
+
 end
