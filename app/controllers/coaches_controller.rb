@@ -6,7 +6,7 @@ class CoachesController < ApplicationController
   end
 
   def search
-    if (User.all.include?(params[:id]))
+    if (User.all.include?(User.find((params[:id]))))
       @user = User.find(params[:id])
       redirect_to new_training_path(user_id: @user.id)
     else
