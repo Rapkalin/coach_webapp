@@ -10,21 +10,22 @@
   </head>
 
   <body>
-    <li><%= link_to "HOME", root_path %></li>
-    <% if (current_user || current_coach) %>
+    <ul id="menu-header">
+      <li><%= link_to "HOME", root_path %></li>
+      <% if (current_user || current_coach) %>
         <% if (current_user) %>
           <li><%= link_to 'MON PROFIL', edit_user_path(current_user) %></li>
         <% elsif (current_coach) %>
           <li><%= link_to 'MON PROFIL', edit_coach_path(current_coach) %></li>
         <% end if %>
-      <li><%= link_to "SE DECONNECTER", destroy_user_session_path, method: :delete %></li>
-    <% end if %>
-
+        <li><%= link_to "SE DECONNECTER", destroy_user_session_path, method: :delete %></li>
+      <% end if %>
+    </ul>
 
     <% if(notice) %>
       <div class="flash flash-success alert alert-dismissible fade show" role="alert"><p class="notice"><%= notice %></p></div>
     <% elsif(alert) %>
-      <div class="flash flash-success alert alert-dismissible fade show" role="alert"><p class="alert"><%= alert %></p></div>
+      <div class="flash flash-warning alert alert-dismissible fade show" role="alert"><p class="alert"><%= alert %></p></div>
     <% end if %>
 
     <%= yield %>
