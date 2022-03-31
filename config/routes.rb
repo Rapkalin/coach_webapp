@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
   resources :users, only: [:show, :edit]
-  resources :coaches, only: :edit
+  resources :coaches, only: [:edit]
+  post 'search', to: 'coaches#search'
+  get 'about', to: 'pages#about'
   resources :trainings, only: [:new, :create, :show, :destroy, :edit, :update]
 end
