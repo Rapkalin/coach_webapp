@@ -6,11 +6,12 @@ class CoachesController < ApplicationController
   end
 
   def search
-    @user = User.find(params[:id])
-    if(@user)
+    if (User.all.include?(params[:id]))
+      @user = User.find(params[:id])
       redirect_to new_training_path(user_id: @user.id)
     else
-      render 'root'
+      flash['alert'] = "L'utilisateur n'existe pas. Veuillez réessayer avec un autre ID"
+      redirect_to root_path
     end
   end
 end
