@@ -34,11 +34,13 @@
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.field input {
+.field input, .field input a, input[type="submit" i] {
   width: 100%;
   padding: 0;
   border: solid white;
   background-color: white;
+  outline: none;
+  cursor: pointer;
 }
 
 .actions {
@@ -46,4 +48,5 @@
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
+  cursor: pointer;
 }
