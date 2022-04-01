@@ -1,6 +1,18 @@
 class TrainingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:create, :new, :show, :destroy, :edit, :update]
 
+  def index
+    @trainings = Training.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @trainings.geocoded.map do |training|
+      {
+        lat: training.latitude,
+        lng: training.longitude
+      }
+    end
+  end
+
   def new
     if current_coach
       @coach = current_coach
