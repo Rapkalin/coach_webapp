@@ -11,6 +11,8 @@
     <%= f.number_field :duration %>
     <%= f.label :Movements %>
     <%= f.collection_check_boxes :movements, Movement.order(:name), :id, :name %>
+    <%= f.label :Résultats %>
+    <%= f.text_area :results %>
     <%= f.hidden_field :user_id, value: Training.find(params[:id])[:user_id] %>
     <%= f.hidden_field :coach_id, value: current_coach.id %>
     <%= f.submit %>
