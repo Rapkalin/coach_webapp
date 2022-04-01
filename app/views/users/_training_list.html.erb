@@ -1,18 +1,51 @@
+<div class="container">
+  <% if @passed_trainings.length > 0 %>
+    <div class="container">
+      <p>Session(s) passée(s) :</p>
+      <% @passed_trainings.each_with_index do |training, index| %>
+        <div class="training">
+          <li>Training session passées N° <%= index + 1 %></li>
+          <li>Date de la training session : <%= training.date  %></li>
+          <li>Nom de la training session : <%= training.title %></li>
+          <li>Objectifs de la training session : <%= training.objectives %></li>
+          <li>Lieu : <%= training.location %></li>
+          <% if !training.results.nil? %>
+            <li>Résulats : <%= training.results %></li>
+          <% end %>
+          <% if current_coach %>
+            <li><%= link_to "Delete", training,
+                    method: :delete,
+                    data: { confirm: "Are your sure?"}%></li>
+            <li><%= link_to "Edit", edit_training_path(training)%></li>
+          <% end %>
+          <br>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 
-<% @trainings.each_with_index do |training, index| %>
-  <div class="training">
-    <li>Training session N° <%= index + 1 %></li>
-    <li><%#= NOM DU COACH  %></li>
-    <li>Date de la training session : <%= training.date  %></li>
-    <li>Nom de la training session : <%= training.title %></li>
-    <li>Objectifs de la training session : <%= training.objectives %></li>
-    <li>Lieu : <%= training.location %></li>
-    <% if current_coach %>
-    <li><%= link_to "Delete", training,
-            method: :delete,
-            data: { confirm: "Are your sure?"}%></li>
-    <li><%= link_to "Edit", edit_training_path(training)%></li>
-    <% end %>
-    <br>
-  </div>
-<% end %>
+  <% if @coming_trainings.length > 0 %>
+    <div class="container">
+      <p>Session(s) à venir :</p>
+      <% @coming_trainings.each_with_index do |training, index| %>
+        <div class="training">
+          <li>Training session à venir N° <%= index + 1 %></li>
+          <li>Date de la training session : <%= training.date  %></li>
+          <li>Nom de la training session : <%= training.title %></li>
+          <li>Objectifs de la training session : <%= training.objectives %></li>
+          <li>Lieu : <%= training.location %></li>
+          <% if !training.results.nil? %>
+            <li>Résulats : <%= training.results %></li>
+          <% end %>
+          <% if current_coach %>
+            <li><%= link_to "Delete", training,
+                    method: :delete,
+                    data: { confirm: "Are your sure?"}%></li>
+            <li><%= link_to "Edit", edit_training_path(training)%></li>
+          <% end %>
+          <br>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
