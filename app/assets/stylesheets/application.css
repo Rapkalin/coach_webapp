@@ -14,6 +14,7 @@
  *= require_self
  */
 
+@import "mapbox-gl/dist/mapbox-gl";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;700;900&display=swap');
 
 html {
@@ -34,6 +35,11 @@ body {
  body a {
    text-decoration: none;
    color: white;
+ }
+
+ .mapbox {
+   height: 600px;
+   width: 100%;
  }
 
  #menu-header {
