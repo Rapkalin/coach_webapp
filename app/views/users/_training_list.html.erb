@@ -11,6 +11,8 @@
           <li>Lieu : <%= training.location %></li>
           <% if !training.results.nil? %>
             <li>Résulats : <%= training.results %></li>
+          <% elsif training.results.nil? %>
+            <li>Résulats : aucun résultat pour le moment</li>
           <% end %>
           <% if current_coach %>
             <li><%= link_to "Delete", training,
@@ -36,6 +38,8 @@
           <li>Lieu : <%= training.location %></li>
           <% if !training.results.nil? %>
             <li>Résulats : <%= training.results %></li>
+          <% elsif training.results.nil? %>
+            <li>Résulats : aucun résultat pour le moment</li>
           <% end %>
           <% if current_coach %>
             <li><%= link_to "Delete", training,
