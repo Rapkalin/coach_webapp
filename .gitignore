@@ -1,6 +1,6 @@
 # Personnalized ignore area
-/.idea/
-/vendor/
+vendor/
+.idea/
 
 # Ignore bundler config.
 /.bundle
