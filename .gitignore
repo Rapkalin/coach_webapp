@@ -1,7 +1,6 @@
 # Personnalized ignore area
-test.rb
-README.md
 /.idea/
+/vendor/
 
 # Ignore bundler config.
 /.bundle
