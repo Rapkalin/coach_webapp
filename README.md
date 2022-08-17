@@ -9,7 +9,7 @@ The Ruby versions are handled with rbenv
 * Node version 12.13.1
 * Yarn version 1.22.19
 
-* System dependencies
+* System dependencie
 
 Backend
 The backend dependencies can be find in the gemfile
