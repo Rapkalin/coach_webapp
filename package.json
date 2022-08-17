@@ -1,6 +1,10 @@
 {
   "name": "coach_webapp",
+  "description": "An app to help coaches with the follow up of their clients",
   "private": true,
+  "bugs": {
+    "url" : "https://github.com/Rapkalin/coach_webapp/issues"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
