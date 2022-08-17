@@ -1,3 +1,12 @@
 // Place all the styles related to the coaches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.usersList {
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #e23438;
+  transition: background 0.3s ease;
+  margin: 5px;
+}
