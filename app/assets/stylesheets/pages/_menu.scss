@@ -1,6 +1,23 @@
 #menu-header {
-  display: inline-block;
-  li {
-    width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 50px;
+  padding: 0px 10px 0px 10px;
+}
+
+#top-nav {
+  display: flex;
+  align-items: center;
+
+  a{
+    padding-left: 10px;
+    color: #2C2C2C;
   }
+}
+
+#logo-wagon {
+  display: flex;
+  align-self: center;
+  height: 35px;
 }
