@@ -17,7 +17,7 @@
     <li><%= link_to "HOME", root_path %></li>
     <% if (current_user || current_coach) %>
       <% if (current_user) %>
-        <li><%= link_to 'MON PROFIL', user_path(current_user) %></li>
+        <li><%= link_to 'MON PROFIL', edit_user_path(current_user) %></li>
       <% elsif (current_coach) %>
         <li><%= link_to 'MON PROFIL', edit_coach_path(current_coach) %></li>
       <% end if %>
