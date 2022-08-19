@@ -1,5 +1,5 @@
+<div class="container">
   <% if @coming_trainings.length > 0 %>
-    <div class="container">
       <p>Session(s) à venir :</p>
       <% @coming_trainings.each_with_index do |training, index| %>
         <div class="training">
@@ -24,7 +24,8 @@
           <br>
         </div>
       <% end %>
-    </div>
+    <% elsif @coming_trainings.length === 0 %>
+      <p>Aucune session à venir !</p>
   <% end %>
 </div>
 
@@ -57,3 +58,4 @@
       <% end %>
     </div>
   <% end %>
+</div>

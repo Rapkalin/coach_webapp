@@ -1,7 +1,7 @@
   <h1 class="welcome">Bienvenue <%= current_coach.first_name %> !</h1>
   <p>Voici un résumé de vos clients : <br>Cliquez sur leurs noms pour avoir le détail</p>
-  <% @trainings.each do |training| %>
-    <li class="usersList"><%= link_to (training.user.first_name + " - ID : " + training.user.id.to_s), user_path(training.user.id) %> </li>
+  <% @users.each do |user| %>
+    <li class="usersList"><%= link_to (user.first_name + " - ID : " + user.id.to_s), user_path(user.id) %> </li>
   <% end %>
 
   <p>Entrer un ID pour ajouter un nouveau client</p>

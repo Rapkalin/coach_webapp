@@ -9,7 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <div id="menu-header">
+
+<div id="menu-header">
+  <img id="logo-wagon" src="/assets/logo-wagon.png" alt="Logo Le Wagon">
+
+  <div id="top-nav">
     <li><%= link_to "HOME", root_path %></li>
     <% if (current_user || current_coach) %>
       <% if (current_user) %>
@@ -26,7 +30,8 @@
       <div class="flash flash-warning alert alert-dismissible fade show" role="alert"><p class="alert"><%= alert %></p></div>
     <% end if %>
   </div>
+</div>
 
-    <%= yield %>
+  <%= yield %>
 
 </html>
