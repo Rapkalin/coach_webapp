@@ -1,4 +1,4 @@
-class CoachesController < ApplicationController
+class CoachesController < HomesController
   skip_before_action :authenticate_user!, only: [:edit, :search, :verify_authenticity_token]
 
   def edit
@@ -14,4 +14,5 @@ class CoachesController < ApplicationController
       redirect_to root_path
     end
   end
+
 end
