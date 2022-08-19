@@ -4,7 +4,9 @@
     <h1>This is the view from <%= @user.first_name %></h1>
     <li>Objectifs de <%= @user.first_name %> : <%= @user.objectives %></li>
     <%= render "partials/training_list" %>
-    <%= link_to "Create a new training", new_training_path(:user_id => params[:id]) %>
+    <div>
+      <%= link_to "Create a new training", new_training_path(:user_id => params[:id]), id: "new-training-button" %>
+    </div>
   <% elsif current_user %>
     <h1>Bonjour <%= current_user.first_name %> et bienvenue sur votre dashboard </h1>
     <li>Vos objectifs : <%= current_user.objectives %></li>
