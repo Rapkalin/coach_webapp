@@ -7,7 +7,7 @@ class HomesController < ApplicationController
       @coming_trainings = []
       @user = current_user
       @trainings = @user.trainings
-      @trainings.each_with_index do |training, index|
+      @trainings.reverse_each do |training|
         if training.date < Time.now
           @passed_trainings.push(training)
           @passed_trainings

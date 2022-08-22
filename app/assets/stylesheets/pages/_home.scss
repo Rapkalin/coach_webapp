@@ -6,7 +6,39 @@
   flex-direction: column;
   height: 100vh - 5.353319057815846vh; // The second part matches the height of the menu (50px)
   width: 100%;
+}
 
+.container-yield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+
+  li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+#container-search-id {
+  margin-bottom: 20px;
+}
+
+.usersList {
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #e23438;
+  transition: background 0.3s ease;
+  margin: 5px;
 }
 
 .login {
@@ -32,7 +64,11 @@
     }
 
   &:hover {
-    background: #df3d35;
+    background: #af252c;
     color: white;
   }
+}
+
+#search-button {
+  padding: 5px 24px;
 }

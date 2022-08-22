@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-yield">
   <% if @coming_trainings.length > 0 %>
       <p>Session(s) à venir :</p>
       <% @coming_trainings.each_with_index do |training, index| %>
@@ -29,13 +29,13 @@
   <% end %>
 </div>
 
-<div class="container">
+<div class="container-yield">
   <% if @passed_trainings.length > 0 %>
-    <div class="container">
+    <div class="container-yield">
       <p>Session(s) passée(s) :</p>
       <% @passed_trainings.each_with_index do |training, index| %>
         <div class="training">
-          <li>Training session passées N° <%= index + 1 %></li>
+          <li>Session passée N° <%= @passed_trainings.length - index %></li>
           <li>Date de la training session : <%= training.date  %></li>
           <li>Nom de la training session : <%= training.title %></li>
           <li>Objectifs de la training session : <%= training.objectives %></li>
@@ -47,10 +47,13 @@
           <% end %>
           <% if current_coach %>
             <br>
-            <li class="btn-valid btn-danger"><%= link_to "Delete", training,
-                    method: :delete,
-                    data: { confirm: "Are your sure?"}%></li>
-            <li class="btn-valid btn-success"><%= link_to "Edit", edit_training_path(training)%></li>
+            <div class="container-button">
+              <li> <%= link_to "Supprimer", training,
+                      method: :delete,
+                      data: { confirm: "Are your sure?"},
+                      class: "btn-valid btn-danger"%></li>
+              <li><%= link_to "Editer", edit_training_path(training), class: "btn-valid btn-success"%></li>
+            </div>
             <br>
           <% end %>
           <br>
