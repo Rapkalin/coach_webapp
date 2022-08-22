@@ -1,16 +1,3 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-#new-training-button {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #3e3af5;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background: #524eff;
-    color: white;
-  }
-}

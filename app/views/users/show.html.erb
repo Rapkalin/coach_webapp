@@ -1,11 +1,11 @@
 
-<div class="container">
+<div class="container-yield">
   <% if current_coach %>
-    <h1>This is the view from <%= @user.first_name %></h1>
+    <h1>Bienvenue sur la page de <%= @user.first_name %></h1>
     <li>Objectifs de <%= @user.first_name %> : <%= @user.objectives %></li>
     <%= render "partials/training_list" %>
     <div>
-      <%= link_to "Create a new training", new_training_path(:user_id => params[:id]), id: "new-training-button" %>
+      <%= link_to "Ajouter une nouvelle session", new_training_path(:user_id => params[:id]), class: "blue-button" %>
     </div>
   <% elsif current_user %>
     <h1>Bonjour <%= current_user.first_name %> et bienvenue sur votre dashboard </h1>

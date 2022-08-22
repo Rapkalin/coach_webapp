@@ -12,7 +12,7 @@ class UsersController < HomesController
       @coming_trainings = []
 
       @trainings = Training.select('*').where(user_id: @user.id, coach_id: current_coach.id)
-      @trainings.each do |training|
+      @trainings.reverse_each do |training|
         if training.date < Time.now
           @passed_trainings.push(training)
           @passed_trainings
