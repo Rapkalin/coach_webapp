@@ -127,3 +127,28 @@ ul, li {
     color: white;
   }
 }
+
+#checkboxes {
+
+}
+
+.container-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input, select {
+  text-align: center;
+  padding: 8px 24px;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#input-results {
+  margin-bottom: 20px;
+}

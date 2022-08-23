@@ -34,7 +34,8 @@
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.field input, .field input a, input[type="submit" i] {
+.field input, .field input a // , input[type="submit" i]
+{
   width: 100%;
   padding: 0;
   border: solid white;
