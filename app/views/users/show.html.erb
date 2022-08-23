@@ -3,10 +3,11 @@
   <% if current_coach %>
     <h1>Bienvenue sur la page de <%= @user.first_name %></h1>
     <li>Objectifs de <%= @user.first_name %> : <%= @user.objectives %></li>
-    <%= render "partials/training_list" %>
+    <br>
     <div>
       <%= link_to "Ajouter une nouvelle session", new_training_path(:user_id => params[:id]), class: "blue-button" %>
     </div>
+    <%= render "partials/training_list" %>
   <% elsif current_user %>
     <h1>Bonjour <%= current_user.first_name %> et bienvenue sur votre dashboard </h1>
     <li>Vos objectifs : <%= current_user.objectives %></li>

@@ -1,12 +1,13 @@
+<br>
 <div class="container-yield">
   <% if @coming_trainings.length > 0 %>
       <p>Session(s) à venir :</p>
       <% @coming_trainings.each_with_index do |training, index| %>
         <div class="training">
-          <li>Training session à venir N° <%= index + 1 %></li>
-          <li>Date de la training session : <%= training.date  %></li>
-          <li>Nom de la training session : <%= training.title %></li>
-          <li>Objectifs de la training session : <%= training.objectives %></li>
+          <li>Session à venir N° <%= index + 1 %></li>
+          <li>Date de la session : <%= training.date  %></li>
+          <li>Nom de la session : <%= training.title %></li>
+          <li>Objectifs de la session : <%= training.objectives %></li>
           <li>Lieu : <%= training.location %></li>
           <% if !training.results.nil? %>
             <li>Résulats : <%= training.results %></li>
@@ -25,7 +26,7 @@
         </div>
       <% end %>
     <% elsif @coming_trainings.length === 0 %>
-      <p>Aucune session à venir !</p>
+      <p>Session(s) à venir : Aucune :(</p>
   <% end %>
 </div>
 
@@ -36,9 +37,9 @@
       <% @passed_trainings.each_with_index do |training, index| %>
         <div class="training">
           <li>Session passée N° <%= @passed_trainings.length - index %></li>
-          <li>Date de la training session : <%= training.date  %></li>
-          <li>Nom de la training session : <%= training.title %></li>
-          <li>Objectifs de la training session : <%= training.objectives %></li>
+          <li>Date de la session : <%= training.date  %></li>
+          <li>Nom de la session : <%= training.title %></li>
+          <li>Objectifs de la session : <%= training.objectives %></li>
           <li>Lieu : <%= training.location %></li>
           <% if !training.results.nil? %>
             <li>Résulats : <%= training.results %></li>

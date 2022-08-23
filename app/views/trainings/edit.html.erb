@@ -1,19 +1,25 @@
+<h1>Modifier la session d'entrainement</h1>
 
-<h1>Edit training page</h1>
-<%= form_for(@training) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <%= f.label :objectives %>
-    <%= f.text_field :objectives %>
-    <%= f.label :duration %>
-    <%= f.number_field :duration %>
-    <%= f.label :Movements %>
-    <%= f.collection_check_boxes :movements, Movement.order(:name), :id, :name %>
-    <%= f.label :Résultats %>
-    <%= f.text_area :results %>
-    <%= f.hidden_field :user_id, value: Training.find(params[:id])[:user_id] %>
-    <%= f.hidden_field :coach_id, value: current_coach.id %>
-    <%= f.submit %>
-<% end %>
+  <%= form_for @training, html: {class: 'container-form', data: { bar: 'baz' } } do |f|%>
+      <%= f.label :Titre %>
+      <%= f.text_field :title %>
+      <%= f.label :date %>
+      <div id="form-dates">
+        <%= f.date_select(:date, :order => [:month, :day, :year]) %>
+      </div>
+      <%= f.label :Lieu %>
+      <%= f.text_field :location %>
+      <%= f.label :Objectifs %>
+      <%= f.text_field :objectives %>
+      <%= f.label "Durée de la séance (en minutes)" %>
+      <%= f.number_field :duration %>
+      <%= f.label :Mouvements %>
+      <div id="form-checkbox">
+        <%= f.collection_check_boxes :movements, Movement.order(:name), :id, :name %>
+      </div>
+      <%= f.label :Résultats %>
+      <%= f.text_area :results, id:"input-results" %>
+      <%= f.hidden_field :user_id, value: Training.find(params[:id])[:user_id] %>
+      <%= f.hidden_field :coach_id, value: current_coach.id %>
+      <%= f.submit "Modifier la session", class: "blue-button" %>
+  <% end %>
