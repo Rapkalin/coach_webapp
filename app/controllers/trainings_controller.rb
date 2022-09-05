@@ -37,7 +37,7 @@ class TrainingsController < ApplicationController
   end
 
   def update
-    @user = User.find(Training.find(params[:id])[:user_id])
+    @user = User.find(Training.find(params[:id]))
     @training = Training.find(params[:id])
     @training.update(training_params)
     redirect_to user_path(@user)
