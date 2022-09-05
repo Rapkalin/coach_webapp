@@ -1,6 +1,8 @@
 # Personnalized ignore area
 vendor/
 .idea/
+.DS_Store
+*.DS_Store*
 
 # Ignore bundler config.
 /.bundle
